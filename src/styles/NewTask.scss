@@ -1,0 +1,106 @@
+@use '../styles/variables.scss' as v;
+
+.newtask {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: v.$bg-color;
+
+
+    h2 {
+        font-size: v.$font-size;
+        font-weight: 500;
+    }
+
+    form {
+        width: 70vw;
+        padding: 30px;
+        margin-bottom: 15px;
+        display: grid;
+        flex-direction: column;
+        box-shadow: 0 10px 30px #121619;
+        border-radius: 15px;
+        grid-template-columns: repeat(3, 1fr);
+
+        div {
+            margin-bottom: 20px;
+            
+
+            input,
+            select,
+            textarea {
+                width: 90%;
+                height: 40px;
+                border-radius: 15px;
+                border: none;
+                border-bottom: 1px solid #121619;
+                color: #151616;
+                background-color: #ffffff;
+                text-align: center;
+                outline: none;
+
+
+            }
+
+            textarea {
+                margin-top: 15px;
+                padding: 10px;
+                height: 100px;
+                color: #121619;
+                resize: none;
+                border: 1px solid #121619;
+                text-align: left;
+            }
+
+            label {
+                margin-top: 5px;
+                color: rgb(14, 13, 13);
+                display: block;
+            }
+
+        }
+
+        button {
+            margin-top: 10px;
+            width: 100%;
+            height: 40px;
+            background-color: v.$btn-color;
+            color: #ffffff;
+            border: none;
+            font-size: 15px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+            grid-column: 2;
+            grid-row: 5;
+            
+
+            &:hover {
+                background-color: v.$btnhover-color;
+            }
+
+        }
+
+
+    }
+
+    .toast{
+        top: 7rem !important;
+    }
+
+
+
+}
+
+.newtask form input::placeholder,
+.newtask form textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newtask form input:focus,
+.newtask form textarea:focus {
+    outline: none;
+}

@@ -1,0 +1,85 @@
+.newtask{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    h2 {
+        font-size: v.$font-size;
+        font-weight: 500;
+    }
+
+    form {
+        width: 20vw;
+        padding: 30px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px #121619;
+        border-radius: 15px;
+        grid-template-columns: repeat(3, 1fr);
+
+        input, select, textarea {
+            width: 100%;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            border-bottom: 1px solid #121619;
+            color: #151616;
+            background-color: #ffffff;
+            text-align: center;
+            outline: none;
+
+            
+        } 
+
+        textarea {
+            margin-top: 15px;
+            padding: 10px;
+            height: 70px;
+            width: 100%;
+            color: #121619;
+            resize: none;
+            border: 1px solid #121619;
+            text-align: left;
+        }
+
+        label {
+            margin-top: 15px;
+            color: rgb(14, 13, 13);
+        }
+
+        button {
+            margin-top: 40px;
+            width: 100%;
+            height: 40px;
+            background-color: #50924e;
+            color: #ffffff;
+            border: none;
+            font-size: 15px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #284b27;
+            }
+        }
+    }
+
+
+    
+}
+
+.newtask form input::placeholder,
+.newtask form textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newtask form input:focus,
+.newtask form textarea:focus {
+    outline: none;
+}

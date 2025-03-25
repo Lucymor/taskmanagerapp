@@ -1,0 +1,183 @@
+@use '../styles/variables.scss' as v;
+
+.ongoingtask {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$bg-color;
+
+    h2 {
+        font-size: v.$font-size;
+        font-weight: 500;
+
+    }
+
+    .view {
+        display: grid;
+        position: absolute;
+        top: 150px;
+        left: 10px;
+
+
+        button {
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 1);
+
+
+            }
+
+        }
+
+    }
+
+    .cards-grid {
+        width: 92%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        padding: 20px 0;
+
+        .task {
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            width: 350px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+
+            .inner{
+                overflow: auto;
+                max-height: 400px;
+                min-width: 80%;
+
+                div {
+                    padding: 10px;
+                    word-wrap: break-word;
+                    text-align: left;
+                    
+
+                    p {
+                        font-weight: bold;
+
+
+                    }
+
+                }
+
+            }
+
+            button {
+                text-decoration: none;
+                border: none;
+                margin: 10px;
+                right: 10px;
+                top: 10px;
+                background-color: transparent;
+                cursor: pointer;
+                position: absolute;
+
+            }
+
+
+            &:hover {
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 1);
+            }
+
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            border-radius: 15px;
+            
+          
+            &-track {
+              background: #eeeeee;
+            }
+          
+            &-thumb {
+              background: #a2afc5;
+              -webkit-border-radius: 15px;
+              border-radius: 5px;
+          
+              &:hover {
+                background: #798394;
+              }
+            }
+          }
+
+
+    }
+
+    .cards-list {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+
+        .task {
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            transition: all 0.5s ease;
+            position: relative;
+
+            .inner{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                min-width: 80%;
+
+    
+                div {
+                    word-break: break-all;
+                    padding: 10px;
+
+                    p {
+                        font-weight: bold;
+                    }
+                }
+
+
+            }
+
+            button {
+                text-decoration: none;
+                border: none;
+                margin: 10px;
+                background-color: transparent;
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+
+
+            }
+
+
+            &:hover {
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 1);
+            }
+
+            
+        }
+
+    }
+}

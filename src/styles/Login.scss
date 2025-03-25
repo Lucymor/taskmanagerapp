@@ -1,0 +1,77 @@
+@use '../styles/variables.scss' as v;
+
+.login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: v.$bg-color;
+
+    h2 {
+        font-size: v.$font-size;
+        font-weight: 500;
+    }
+
+    form {
+        width: 20vw;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px #121619;
+        border-radius: 15px;
+
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 15px;
+            border-bottom: 1px solid #121619;
+            color: #121619;
+            text-align: center;
+        }
+
+        textarea {
+            margin-top: 15px;
+            height: 70px;
+            width: 100%;
+            color: #121619;
+            resize: none;
+        }
+
+        label {
+            margin-top: 15px;
+            color: gray;
+        }
+
+        button {
+            margin-top: 40px;
+            width: 100%;
+            height: 40px;
+            background-color: v.$btn-color;
+            color: #ffffff;
+            border: none;
+            font-size: 15px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: v.$btnhover-color;
+            }
+
+        }
+    }
+
+
+}
+
+.login form input::placeholder,
+.login form textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login form input:focus,
+.login form textarea:focus {
+    outline: none;
+}
